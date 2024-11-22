@@ -15,4 +15,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          pip install -r requirements.txt
+          flask --app app/app.py run
       - run: echo "🍏 This job's status is ${{ job.status }}."
