@@ -17,4 +17,6 @@ jobs:
           ls ${{ github.workspace }}
           pip install -r requirements.txt
           flask --app app/app.py run
+          curl http://127.0.0.1:5000/
+          curl http://127.0.0.1:5000/stopServer
       - run: echo "🍏 This job's status is ${{ job.status }}."
